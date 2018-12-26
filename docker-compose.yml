@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  react:
+    build: ./react
+    container_name: react
+    tty: true
+    stdin_open: true
+    restart: always
+    user: root
+    ports:
+      - 3002:3000
+    working_dir: /tmp/react
+    volumes:
+      - ./react:/tmp/react
